@@ -1,0 +1,123 @@
+name: 🌍 Translation/Localization
+description: Help translate D8 Progress or report translation issues
+title: "[Translation]: "
+labels: ["translation", "localization"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping make D8 Progress accessible to more people around the world! 🌍
+        
+        Whether you're reporting a translation issue or offering to help translate, we appreciate your contribution.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: What type of translation issue is this?
+      options:
+        - "I want to help translate D8 Progress to a new language"
+        - "I found an incorrect translation"
+        - "I found untranslated text"
+        - "I want to improve an existing translation"
+        - "I have a question about translation"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      description: Which language is this about?
+      options:
+        - Arabic
+        - Chinese (Simplified)
+        - Chinese (Traditional)
+        - Danish
+        - Dutch
+        - Finnish
+        - French
+        - German
+        - Italian
+        - Japanese
+        - Korean
+        - Norwegian
+        - Portuguese
+        - Russian
+        - Spanish
+        - Swedish
+        - Other (please specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: other-language
+    attributes:
+      label: Other language (if not listed above)
+      placeholder: e.g., Hindi, Polish, Turkish...
+    validations:
+      required: false
+
+  - type: textarea
+    id: current-text
+    attributes:
+      label: Current text (if reporting an issue)
+      description: What text is currently shown that needs to be fixed?
+      placeholder: Copy the current text here...
+
+  - type: textarea
+    id: suggested-text
+    attributes:
+      label: Suggested translation
+      description: What should the text say instead?
+      placeholder: Your suggested translation...
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: |
+        Where did you see this text? What page/feature?
+        Any context that would help us understand the translation better?
+      placeholder: |
+        e.g., "This appears on the goal creation page"
+        e.g., "This is the tooltip when hovering over the XP bar"
+
+  - type: checkboxes
+    id: experience
+    attributes:
+      label: Translation experience
+      description: Tell us about your translation background (optional)
+      options:
+        - label: I'm a native speaker of this language
+        - label: I have professional translation experience
+        - label: I'm familiar with software/app translation
+        - label: I understand neurodivergent terminology in this language
+        - label: I'm a D8 Progress user who speaks this language
+
+  - type: textarea
+    id: neurodivergent-terms
+    attributes:
+      label: Neurodivergent terminology
+      description: |
+        Do you have suggestions for how terms like "ADHD", "autism", "executive dysfunction", 
+        "dopamine", "neurodivergent" should be translated or handled in your language?
+        
+        This is important for making D8 Progress culturally appropriate and respectful.
+      placeholder: Suggestions for neurodivergent terminology...
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional information
+      description: Anything else you'd like us to know?
+      placeholder: Any other context, questions, or information...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before submitting
+      options:
+        - label: I understand that translations should be respectful and appropriate for neurodivergent users
+          required: true
+        - label: I'm willing to help review translations if needed (optional)

@@ -1,0 +1,87 @@
+name: ❓ Question/Support
+description: Ask a question about using D8 Progress
+title: "[Question]: "
+labels: ["question", "support"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got a question about D8 Progress? We're here to help! 🤗
+        
+        💡 **Tip**: You might also want to check our [Discussions](https://github.com/D8Progress/d8-community/discussions) for community Q&A.
+        
+        🧠 **Remember**: There are no stupid questions, especially when it comes to productivity and neurodivergent experiences!
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What's your question?
+      description: Ask away! Be as detailed as you'd like.
+      placeholder: I'm wondering about...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question category
+      description: What is your question about?
+      options:
+        - Getting started / Setup
+        - Goals and objectives
+        - Tasks and completion
+        - Gamification (XP, levels, achievements)
+        - Party system (characters, gold)
+        - Streaks and streak shields
+        - Account and settings
+        - Accessibility features
+        - Mobile/browser compatibility
+        - Productivity strategies
+        - ADHD/autism-specific features
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: What have you already tried?
+      description: |
+        Have you looked anywhere for the answer already?
+        Any steps you've tried that didn't work?
+      placeholder: |
+        e.g., "I looked in settings but couldn't find..."
+        e.g., "I tried clicking on X but..."
+
+  - type: checkboxes
+    id: user-info
+    attributes:
+      label: About you (optional - helps us give better answers)
+      description: Check any that apply
+      options:
+        - label: I'm new to D8 Progress (less than a week)
+        - label: I have ADHD
+        - label: I'm autistic
+        - label: I use assistive technology
+        - label: I'm using mobile primarily
+        - label: I'm using desktop primarily
+        - label: I prefer minimal gamification
+        - label: I love full gamification
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Anything else?
+      description: Any other context or information that might help us answer your question?
+      placeholder: Any additional details...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched existing issues and discussions for similar questions
+          required: true
+        - label: I understand this is for questions about using D8 Progress (not bug reports or feature requests)
+          required: true
